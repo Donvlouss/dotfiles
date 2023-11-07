@@ -1,0 +1,257 @@
+# Refrence: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: LLVM
+# None, Cpp, Java, JavaScript, ObjC, Proto, TableGen, TextProto
+Language: Cpp
+
+# 存取說明符(public、private等)的偏移
+AccessModifierOffset: -4
+
+AlignArrayOfStructures: Right
+
+# 開括號(開圓括號、開尖括號、開方括號)後的對齊: Align, DontAlign, AlwaysBreak(總是在開括號後換行)
+AlignAfterOpenBracket: Align
+
+# 連續賦值時，對齊所有等號
+AlignConsecutiveAssignments: true
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: false
+
+# 連續宣告時，對齊所有宣告的變數名
+AlignConsecutiveDeclarations: false
+
+# 右對齊逃脫換行(使用反斜線換行)的反斜杠
+AlignEscapedNewlines: Left
+
+# 水平對齊二元和三元表達式的操作數
+AlignOperands: Align
+
+# 對齊連續的尾隨的註釋
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+
+# 不允許函數宣告的所有參數放在下一行
+AllowAllParametersOfDeclarationOnNextLine: false
+
+# 不允許短的區塊放在同一行
+AllowShortBlocksOnASingleLine: Empty
+
+AllowShortEnumsOnASingleLine: true
+
+# 允許短的case標籤放在同一行
+AllowShortCaseLabelsOnASingleLine: true
+
+# 允許短的函數放在同一行: None, InlineOnly(定義在類別中), Empty(空函數), Inline(定義在類別中，空函數), All
+AllowShortFunctionsOnASingleLine: Empty
+
+# 允許短的if語句保持在同一行
+AllowShortIfStatementsOnASingleLine: WithoutElse
+
+AllowShortLambdasOnASingleLine: All
+
+# 允許短的循環保持在同一行
+AllowShortLoopsOnASingleLine: true
+
+# 總是在傳回型別後換行: None, All, TopLevel(頂層函數，不包含在類別中的函數),
+# AllDefinitions(所有的定義，不包括宣告), TopLevelDefinitions(所有的頂層函數的定義)
+AlwaysBreakAfterReturnType: TopLevelDefinitions
+
+# 總是在多行string字面量前換行
+AlwaysBreakBeforeMultilineStrings: false
+
+# 總是在template宣告後換行
+AlwaysBreakTemplateDeclarations: Yes
+
+# false表示函數實參要嘛都在同一行，要嘛都各自一行
+BinPackArguments: false
+
+# false表示所有形參要嘛都在同一行，要嘛都各自一行
+BinPackParameters: false
+
+# 大括號換行，只有當BreakBeforeBraces設定為Custom時才有效
+BraceWrapping:
+   AfterCaseLabel: false
+   # class定義後面
+   AfterClass: false
+   # 控制語句後面
+   AfterControlStatement: Never
+   # enum定義後面
+   AfterEnum: false
+   # 函數定義後面
+   AfterFunction: false
+   # 命名空間定義後面
+   AfterNamespace: true
+   # struct定義後面
+   AfterStruct: false
+   # union定義後面
+   AfterUnion: false
+   # extern之後
+   AfterExternBlock: false
+   # catch之前
+   BeforeCatch: false
+   # else之前
+   BeforeElse: false
+   BeforeLambdaBody: false
+   BeforeWhile: false
+   # 縮排大括號
+   IndentBraces: false
+   # 分離空函數
+   SplitEmptyFunction: false
+   # 分離空語句
+   SplitEmptyRecord: false
+   # 分離空命名空間
+   SplitEmptyNamespace: false
+
+BreakAfterAttributes: Always
+
+# 在二元運算子前換行: None(在運算元後換行), NonAssignment(在非賦值的運算子前換行), All(在運算子前換行)
+BreakBeforeBinaryOperators: None
+
+# 在大括號前換行: Attach(總是將大括號附加到周圍的上下文), Linux(除函數、命名空間和類別定義，與Attach類似),
+# Mozilla(除枚舉、函數、記錄定義，與Attach類似), Stroustrup(除函數定義、catch、else，與Attach類似),
+# Allman(總是在大括號前換行), GNU(總是在大括號前換行，並且對於控制語句的大括號增加額外的縮排), WebKit(在函數前換行), Custom
+# 註：這裡認為語句塊也屬於函數
+BreakBeforeBraces: Custom
+
+BreakBeforeConceptDeclarations: Always
+
+# 在三元運算子前換行
+BreakBeforeTernaryOperators: false
+
+# 在建構函式的初始化清單的冒號後換行
+BreakConstructorInitializers: BeforeColon
+
+BreakInheritanceList: AfterColon
+
+BreakStringLiterals: false
+
+# 每行字元的限制，0表示沒有限制
+ColumnLimit: 0
+
+CompactNamespaces: false
+
+# 建構函式的初始化清單的縮排寬度
+ConstructorInitializerIndentWidth: 4
+
+# 延續的行的縮排寬度
+ContinuationIndentWidth: 4
+
+# 移除C++11的列表初始化的大括號{後和}前的空格
+Cpp11BracedListStyle: true
+
+# 繼承最常用的指標和引用的對齊方式
+DerivePointerAlignment: false
+
+EmptyLineBeforeAccessModifier: Always
+
+# 固定命名空間註釋
+FixNamespaceComments: true
+
+IncludeBlocks: Preserve
+
+# 縮排case標籤
+IndentCaseLabels: false
+
+IndentPPDirectives: AfterHash
+
+IndentExternBlock: Indent
+
+IndentRequiresClause: true
+
+# 縮排寬度
+IndentWidth: 4
+
+# 函數傳回型別換行時，縮排函數宣告或函數定義的函數名
+IndentWrappedFunctionNames: false
+
+InsertBraces: true
+
+LambdaBodyIndentation: Signature
+
+# 保留在區塊開始處的空白行
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# 連續空行的最大數量
+MaxEmptyLinesToKeep: 2
+
+# 命名空間的縮排: None, Inner(縮排嵌套的命名空間中的內容), All
+NamespaceIndentation: All
+
+PackConstructorInitializers: BinPack
+
+# 指標與引用的對齊: Left, Right, Middle
+PointerAlignment: Left
+
+QualifierAlignment: Custom
+QualifierOrder: ['inline', 'static', 'const', 'type']
+
+# 允許重新排版註釋
+ReflowComments: true
+
+RequiresClausePosition: OwnLine
+RequiresExpressionIndentation: OuterScope
+
+# 允許排序#include
+SortIncludes: false
+
+# 允許排序 using 聲明
+SortUsingDeclarations: false
+
+# 在C風格類型轉換後加入空格
+SpaceAfterCStyleCast: false
+
+SpaceAfterLogicalNot: false
+
+# 在Template 關鍵字後面新增空格
+SpaceAfterTemplateKeyword: true
+
+# 在賦值運算子之前加入空格
+SpaceBeforeAssignmentOperators: true
+
+SpaceBeforeCaseColon: true
+
+SpaceBeforeCpp11BracedList: false
+
+SpaceBeforeCtorInitializerColon: true
+
+SpaceBeforeInheritanceColon: true
+
+# 開圓括號之前加上一個空格: Never, ControlStatements, Always
+SpaceBeforeParens: ControlStatements
+
+SpaceBeforeRangeBasedForLoopColon: false
+
+SpaceBeforeSquareBrackets: false
+
+SpaceInEmptyBlock: true
+
+# 在尾隨的評論前面所新增的空格數(只適用於//)
+SpacesBeforeTrailingComments: 1
+
+# 在尖括號的<後和>前面加上空格
+SpacesInAngles: Never
+
+# 在容器(ObjC和JavaScript的陣列和字典等)字面量中加入空格
+SpacesInContainerLiterals: true
+
+# 在圓括號的(後和)前面加上空格
+SpacesInParentheses: false
+
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+
+# 在方括號的[後和]前面加上空格，lamda表達式和未指明大小的數組的宣告不受影響
+SpacesInSquareBrackets: false
+
+# 標準: Cpp03, Cpp11, Auto
+Standard: Latest
+
+# tab寬度
+TabWidth: 4
+
+# 使用tab字元: Never, ForIndentation, ForContinuationAndIndentation, Always
+UseTab: Never
