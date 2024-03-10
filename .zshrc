@@ -36,8 +36,15 @@ zinit load zdharma-continuum/history-search-multi-word
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit snippet https://raw.githubusercontent.com/jirutka/zsh-shift-select/master/zsh-shift-select.plugin.zsh
+
+zinit snippet OMZ::lib/completion.zsh
+zinit snippet OMZ::lib/history.zsh
+zinit snippet OMZ::lib/key-bindings.zsh
+zinit snippet OMZ::lib/theme-and-appearance.zsh
+zinit load djui/alias-tips
 
 # theme
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -52,3 +59,8 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" emacs-forward-word
 bindkey "^[[1;5D" emacs-backward-word
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey ',' autosuggest-accept
+
+alias open='explorer.exe  `wslpath -w "$1"`'
